@@ -1,0 +1,172 @@
+{% include "header.html" %}
+  <!-- Page Header -->
+
+  <hr>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>My Gallery</h1>
+            <span class="subheading">All photos are taken by myself. Enjoy! </span>
+            <span class="subheading">(click to see the full image) </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<style>
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	background: linear-gradient(45deg, #190f2c, #200b30);
+	padding: 15px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Main CSS */
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+.grid-wrapper .wide {
+	grid-column: span 2;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+
+</style>
+
+<div id="gallery" class="grid-wrapper">
+<!--	<div class='big' onclick="window.location = 'https://lh3.googleusercontent.com/phk2XPwDECSMqdCdpQNO-WAjCx8zkcDGZf6XuJSxi-TAeDPKGYcwFjHJ7zDmQcJxFjJ9HLOCHWNKJ0dAgJsKResPCao9VhKzOkwJ3fZTpDpuL2RgbNROzyVniFNe_1exbzhCXMsYs8iGL2klLY94MJahUnGvFY3FjuoptOCfP9gy5tt4_IhXvh4dacKc5xA4sjgbZTHcq0VB7gs-fq3mVjgMhJGp69T0lg5cALaN-9Xj7MNKwsTBDTnUmydeFW56TLU1PCGg-ArL7im5tfMBZmRkX8aJuyKaMrucAiTFTJKAeuJTky6gkbbsTBHaN0zE-ejQymQzTVpX4UYV5uuN4PdGLGwdGkXt8G1HvkX4YER_9qR7imYh6YBrHUCqKRzJ8g0XPNfsMCAsMGrD0kMWEsZ-YHdrInVH4qHy3Uhfi_Gviq-ZDRXkDnMd3DI-b8dadXyPs5M3qm_X4aBKQ81x1tyuGQ0BI2pNNYEB1S4V46k9-tlpfST1W1UChxUlrAayUJH75hWbb4r97IGpNHOqbYvPlYhLZGfpoesIjwoEJ8HCj2Y2qBYzaM2w9BDagGyFswSbOx9NnHKEistzXUsqslNh4FBrlXdUnQqc9BkKmVxJQ6nAsedEH8oBsFtSDSHTJ_y8uDlLs1mQXSbrsHWVrBJe_nUUaA3-6V5-njofByem0GiLOKSuBszz9JZcgPUq6RpAfdQcYrkgFZ78XotwWwk=w1232-h822-no?authuser=0'";>-->
+<!--		<img src="https://lh3.googleusercontent.com/phk2XPwDECSMqdCdpQNO-WAjCx8zkcDGZf6XuJSxi-TAeDPKGYcwFjHJ7zDmQcJxFjJ9HLOCHWNKJ0dAgJsKResPCao9VhKzOkwJ3fZTpDpuL2RgbNROzyVniFNe_1exbzhCXMsYs8iGL2klLY94MJahUnGvFY3FjuoptOCfP9gy5tt4_IhXvh4dacKc5xA4sjgbZTHcq0VB7gs-fq3mVjgMhJGp69T0lg5cALaN-9Xj7MNKwsTBDTnUmydeFW56TLU1PCGg-ArL7im5tfMBZmRkX8aJuyKaMrucAiTFTJKAeuJTky6gkbbsTBHaN0zE-ejQymQzTVpX4UYV5uuN4PdGLGwdGkXt8G1HvkX4YER_9qR7imYh6YBrHUCqKRzJ8g0XPNfsMCAsMGrD0kMWEsZ-YHdrInVH4qHy3Uhfi_Gviq-ZDRXkDnMd3DI-b8dadXyPs5M3qm_X4aBKQ81x1tyuGQ0BI2pNNYEB1S4V46k9-tlpfST1W1UChxUlrAayUJH75hWbb4r97IGpNHOqbYvPlYhLZGfpoesIjwoEJ8HCj2Y2qBYzaM2w9BDagGyFswSbOx9NnHKEistzXUsqslNh4FBrlXdUnQqc9BkKmVxJQ6nAsedEH8oBsFtSDSHTJ_y8uDlLs1mQXSbrsHWVrBJe_nUUaA3-6V5-njofByem0GiLOKSuBszz9JZcgPUq6RpAfdQcYrkgFZ78XotwWwk=w1232-h822-no?authuser=0" alt="" />-->
+<!--	</div>-->
+<!--	<div onclick="window.location = ''";>-->
+<!--		<img src="" alt="" />-->
+<!--	</div>>-->
+</div>
+<script>
+var photoLink=[];
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=JWpElYZDgmtUool3k1BCdW4gn5LXwdkrD5hoVhClYz4yjPlUIXNFspdnHSpcumU7PQVOoUQuuhIEk8Pyq.PcSWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=jk9JpR2G32_9k.c.sk8Qq0hbUzkeB8tf.UspDYRgmccxRkAV4_ss5kddFmyX2jeMW3RZiB_7UKtHEBVx3KWieWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=mp2Up97a1zOMJh4uXOaobjs.CEz2bz0Phoc2OPohjmCrEsJ46dNCkCssBEC5dJTs6vPFJdk6JbU90Shrph6UcmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=oSF5C9V2IAfmtk66rz54NsPbBykNcHdUXIwwrmqCZDVekvLWxRwza3BB3m_15ANXgiy3LgmUYItaSq1YiWWkOGJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=WO85d1CvvkKp.4uH8EhuD1SLwxU4m.DAWtj8PjtvmAl8y76T33e3NNpUTESDaZWvmVIh1CDjLTEcDKpDkOBXsGJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=A8oZS0PPUR0LdnSw2SL_OhxDN6G4zW.oqqPkXOsT_KmB_C_DbeE64P_H8Cdt3UGFBFwG8wWPKdNwG_mRgUrNZmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=PGKqScyJntN7SdLc_DusSVdTDwoe8JsLqvS.5n7I5c0pCQYJy9BGLtZd8Xet4AocGxf6efnk4qPr40Pgq9Uu8GJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=hLilCuPmnu_H5P1l8EkzZqSNiJcly5towELK2vooTOgas6IKfzyvqMP8u2vg3x1JM.D1ALwCfIAvaQnnaOUHEmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=j6dVW7C9n9QTr0wO8zGvA7w4C1mZecJ0VKtNblsjPXFOAoZ8aqstjw.uj2sUz9YpubBdSM2lEGLluxafj4f7pWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=Z1rcThdRP9g0.DAAA_ltMWCRvFKOTS8mwnBCv9lqTgsWQFJklDGObh4aB8nGw_cFhvP8dStdw4usF8G8wMYGhGJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=8Dl5QdZUZf2dxOLueTi5ceJR2tDYRRZonlh2mQ.og15nfpb7rl4Vko4DTrUrwMYtB13BLafpKOk_7_U1tTFF8GJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=X_GBJufU.5oaSCKe9xHGNGOvYHZvWZOVMT3BtRG5zoaCaR.pjipbJLNf1ZvxhI_3bIsL5TjXyPGRBWYih3glNmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=B17ZlJTicxfG3LJeiBo_937uSPSst33zvfVSJuALtDUwEDh03_vOXat3p9T28QAENKZu1.vflrTmSI2QH5a202JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=o_HCyj3sp4j87MdRF4cxZWBAtmOusY4pDnyemC3VWaYiwIsAxEYsjdXz4Qln5MdFo9TVZ..FEMa_KoSoUDra.mJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=Ywj0Iz07DM6vEEfhczcLUlwvAAmoE.A7Xx2aD9Pr9zrlwizdwQTsZsT7pXZQ4FBhSmYov7V5Gqh8L6gL3KwJQ2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=7u._2_8Nwn76HtGXaDx7j.6FT4C1pEMV8MIUJSrh9x64Oe.EVdfj1JBqReoANO.UzBSCfvHXUun5lTwrCYBCGWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=V5f4zbL4vxbwfW_wbBcpOJOT0n3kHqCpi3zKMvXWwS0Yvpw.eE77Aze9PISskJ6FNRQ2TjNOh_IRAlXT2CKohWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=B5nsGOg7.BQID7mIgLbglnGperHawZ0PraX8EbJ1KPdY2bPgjloK0K_0LXjAajmqVi.0X38zwgoONvLaoQpX8mJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=0ZLzV.OfdrjOQXBjDPmrzzQSbUJoTSnvt4J85CQkZXgPDki539XmBgKiuIM9V7Z92cIiUCcDtm3HDfHh4VFZWWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=8FoAqreU9yRerEE8SyQIgrAncsjV6VqFHg4cZzRDEMXtm3KLriQ1WECXhiqmOVLlChAPyTN3HtvHeVWIto5AxGJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=XUBWzmflAOqyaEQBScHRjDI3mHyxOHz9Gg2WENYsPssjYg2tTAX7TryF1sqD_A1U3BGUlg7HLMP1N3JJKZwof2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=odGVTvheMHjmnF1KRurgLal5FaeVIC8jtWp59B4jYy68pKpfKyH3NHgzf7iMk4v6PRxDFjt5hyNygvgvBktOMWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=lPgXSlDWqrfQRszosOZ3MbNanvuGeTkKRKZe657iIE7uc7DPuvPpgtu10GhmtQ8g8H6KblLGomYQxMKcx488J2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=0q4mSFTYwin9TP4CrpRn32wkeY7jKheabQDlCUZNMh_AVpaKPTM9t6Ghk0VUXEeXExT6fy0fokw58hfpxdteGWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=UFlnyiOqPrCJa08apHGXZhhwVycusxEGsT0Ts.48F9tb7s_B400PgHeREel5Z_c4EuRYgstKeFX0ZlqKR2uZs2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=qKqLkjxf69LdllMmo3JkNnt5KWRRLJtbkT1z1JyKabMGvU0GkMKdxaNPeSng_3qyvM46NRclE9.rOf.17VX5n2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=LWTiT88Xz6fR8OtG1Uro78r5kFlZKQKyIl5C6b7FBqRbHsa7itAs5nKZ1yhXEalqA1PB3f9YhR5G8cqa.0wNkmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=yE1lkhW9R3yPCVxJalmLOIHhYa82z0DITlyTxgTw2QKFROylDQEB1l9dx0y3rsMjcs9axPYtm4SyFBl5lqWnaWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=9o36bD.8AHkKYxdMs8npVW8yjPCtmMKxX15eyeXxtObhnuEmbvbKCWh1kivPxAX_05AddzoYdNfexyIQhjALN2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=XV0g4dgIr6c0OUcoZjISW29MBFAEGJznJkRbLpivWoESkIZcHuaHWuqf.cCVpUhidIBS3tikXyhHnigyndgPgmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=yBkMDIkTR4u_SfhJ2J99TaRpiCUEFSnwV.5UYzx5brbpd1wRUVr4KquIPsezexwdZU_EsHPIiaHnDuT7fX_XQ2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=Xf.bvmLC469rbO.vaY3NruJR2tDYRRZonlh2mQ.og1532bP9RSXYbfjsw3GnnmSZgh2IGasv_Bq9Zp3klxmBDmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=X8Ui9Z78CdexdtbMjxa.yYAKi0iiCafsAipb3L6Gy5dTgFrfCX3bqvY2MS3zguz0xmNcDgC9RbrF3W_MxzcCBmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=wN_db4Nf.naARRzZ_CU_TmgQQMrzFVb.huFjyv5VZDWp7ajS_FIxMDXWxvEs8RLte5Fs1Zcsy5usxjitQ1SaGmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=bhu81gwD3weN4b1Fje8E5OsK4N7pYHpSaWuVI99SFistOTV1TZwYSqjZO7Cmz8gfaev5yDvvR1mhH1sDMXR4F2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=ATyxXr_4UPiQ3WYwsBOlq2CRvFKOTS8mwnBCv9lqTguLY6oGaDacfHjeCtj6.UJg9Vvcdgt881M7e6g3LxBHr2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=6sBbMxlZqmbVuyU2XGKEgCPfkT86dgqozstkSSF5Y2cJXFd4UCj6S.g72NQMXqVOBrMQTbtcr7Rb9WsMn_EgU2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=X8H17DegVUHVyj1laJ45b9KDE5gnBxiNcJICIeU8FeLauBMJVnEogodDPTinxr3K.zG835CyyPbYZT9TNaABi2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=OPjkzHjK6g1qKP8HZ8pNtqNkpcDfgIuPMzvPajlX1JYJctrUYYphyyRWQfo6Yi.lvYaGRIZz.u1YDv7kIFlnpmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=_r01Y735C4R9vMc64XCmzKM.gc_A4rw2hUh2NIzP3fd42UT7V47ILWs0GQwDfse8gZYltaomnNxAeNCstAbXKGJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=mw7eGJY8m.wGteArYw68J_qf_rA8.1eJI2lXeFWC4jsKZaNdshUiE_JvVF7nsy5F7BLtpdj8X47ttojOtTq_cWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=Ljow9jCHwH5dl.RJ3MDs2j.ALtFA.KWxQYiE90MGDoymv3MPj7pHzO97WpSejdu.9MN8nyj8V_4mlD81S7aPZmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=VzQLe5r1yDEeMXYkpu9tx610tPc2QkT4j_ZfSQaqA7_OtDvpn57DC_yYAO4vp.sC_bJYr7JuQfpZV46OcskTVWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=.7du.m9yQ.fDD4QNpU9x.60e85Jemk..Ck3pwI_NYFH9rZ5TEUGBBHC6uRAhNNISWVTHxUnGRp4Dx.xBzyMyqWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=3m9bzUlmfQxp_.XkJAcVO1KTgPQkTVJ8ccd.hgyl_1KJZ.bPxZDAMHQIQt0aBqGbY1dfIItxIbb7DenfMooaxmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=cqsEOe.iSXbGNqVh6vzzIguRcYG87KJ_DiCn5DBra2vP7wtrHcPS8oh6XCjyLjx_RC3VsQvGe3mVyYWuMGYgU2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=EOnH259rksm2LBHvyNUJLER9.bCKwux2dvLfsMQkWdtwtSmsdPi8.uDKrHQHODY1Wo1lP90.oNuAe7VObIG4FGJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=OZ5HHJGUQ2svDQpbI2k6pYZfk2mvF1oYbwFgpQ.VGcLb.FqD48CRnceyYUN0cejHsPql7xqHtVc1UEyDjou5NWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=kymVIcBACkH6zB5cFayEPH7uSPSst33zvfVSJuALtDWuod9724OWbyuzPawn3jX8Eq0XkgpWnq80mX_y3GTqamJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=XXk2WwOqLwV3UKsrUkz0Mhm7oG_TTBFAc2n4SRnFpQrr63QTmmy4_453E5SmncZIC6kaMSe_9gHM_rGQNx2eD2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=j4ASttOFd1N.BxFzVc10L8T.4gt2BDfJHiKx34hOgcCM6dTXuIPh8domGzRdbt.Hl7Br_ZldPaXbNBCimsPGn2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=B8_r4h811OZ1ifesdoKJ4Z7Ct3lrFqxI2PXhtdNIEKK0DZ2FXQOhU3ZbhmjDxaP2yMHN0WOH75MDm.1zryjXnmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=Gf43KmSXSXTmguJVLG8E.WOvYHZvWZOVMT3BtRG5zoaDN5A.1hO.oNRdzNBIyVWsb8XVc9npNrVRkZ0l16fpomJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=FWQ3wriDbUuG1qc._39yBQm45ITemsmr6ZwvBrHPDinGhUaiIV2Wj1ukc3dintDd9HrHnXAdcEsJjgAKxqdOqmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=99.MgSfXVRHU9_oEj.xZ2dNuP.MW1yDgXV523kaH_z.vAEy9NCHnZxrfoiw2_5qKNSesb2iAAGOxGzqCG0L3XmJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=l0w9dOwm9uZpi.oIcpEj3BjYs33TC1to7FFkcnigqSlCJlpar6dFEA7HryINxYj.EQu1Y5NNAZYNXZ3yvjiZomJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=hn_ONnzGyiVk83PSnhmzJJjh6hcICNZL22B4OtZoOKL6X5T970rJRU3b7e.mhXZh2wjW1QVdqJVlE6Se6xis6WJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=tPyrLHcMgKNFwovauusuD6SNiJcly5towELK2vooTOjdlQm1oS01csaOHOOjEJ1DxkcL5HY_8cpDnF4i1HziKWJjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-846.icedrive.io/thumbnail?p=6v_g9vWaGlglxKAmpJz2LkOZs3yToqA9vROXXYViZJfLh70S2t7yalSm3JAXb1cE1NI3fHk3IecP38yT.mOwo2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+photoLink.push('https://icecube-us-845.icedrive.io/thumbnail?p=51dvdQzDy6eSrxRNkyKcZojrPrzTwUs8n_gRMvQsqkj.RF2ATWZU0IwnQZSXpPU3l0nK4ZwX8MixFAwW4so.J2JjIueBzPUfljoMuTeVKtLgvTAHvNnEiQj9Tev8ouoq&w=1024&h=1024&m=cropped');
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+<!--photoLink.push('');-->
+
+
+
+
+
+console.log(photoLink.length)
+var x ="", i;
+for (i=0; i<photoLink.length; i++) {
+  x = x + "<div class='big' onclick=\"window.location = '" + photoLink[i] + "'\";>" + " <img src='"+ photoLink[i] + "' alt='photo"+i+"' /></div>";
+  console.log(i)
+  console.log(x)
+}
+document.getElementById("gallery").innerHTML = x;
+</script>
+
